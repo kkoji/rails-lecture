@@ -4,18 +4,18 @@
     <a href="/boards" class="btn btn-outline-dark">掲示板一覧</a>
   </div>
 </div>
-<form>
+<%= form_for @board do |f| %>
   <div class="form-group">
-    <label for="name">名前</label>
-    <input id="name" class="form-control">
+    <%= f.label :name, '名前' %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <label for="title">タイトル</label>
-    <input id="title" class="form-control">
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <label for="body">本文</label>
-    <textarea id="body" class="form-control" rows="10"></textarea>
+    <%= f.label :body, '本文' %>
+    <%= f.text_area :body, class: 'form-control', rows: 10 %>
   </div>
-  <button type="submit" class="btn btn-primary">保存</button>
-</form>
+  <%= f.submit '保存', class: 'btn btn-primary' %>
+<% end %>
