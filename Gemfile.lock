@@ -48,6 +48,7 @@ GEM
       sass (>= 3.5.2)
     builder (3.2.3)
     byebug (10.0.0)
+    coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -89,6 +90,12 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     popper_js (1.12.9)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-byebug (3.6.0)
+      byebug (~> 10.0)
+      pry (~> 0.10)
     puma (3.11.2)
     rack (2.0.4)
     rack-test (0.6.3)
@@ -173,6 +180,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
+  pry-byebug
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
