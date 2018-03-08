@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center">
   <h1>掲示板作成</h1>
   <div class="ml-auto boards__linkBox">
-    <a href="/boards" class="btn btn-outline-dark">掲示板一覧</a>
+    <%= link_to '一覧', boards_path, class: 'btn btn-outline-dark' %>
   </div>
 </div>
 <%= form_for @board do |f| %>

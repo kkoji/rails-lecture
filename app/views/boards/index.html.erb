@@ -12,16 +12,18 @@
       <th>作成者</th>
       <th>作成日時</th>
       <th>更新日時</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% @boards.each do |board| %>
       <tr>
-        <th><%= board.id %></th>
-        <th><%= board.title %></th>
-        <th><%= board.name %></th>
-        <th><%= board.created_at.to_s(:datetime_jp) %></th>
-        <th><%= board.updated_at.to_s(:datetime_jp) %></th>
+        <td><%= board.id %></td>
+        <td><%= board.title %></td>
+        <td><%= board.name %></td>
+        <td><%= board.created_at.to_s(:datetime_jp) %></td>
+        <td><%= board.updated_at.to_s(:datetime_jp) %></td>
+        <td><%= link_to '詳細', board, class: 'btn btn-outline-dark' %></td>
       </tr>
     <% end %>
   </tbody>
