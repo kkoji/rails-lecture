@@ -4,6 +4,11 @@
     <a href="/boards/new" class="btn btn-outline-dark">新規作成</a>
   </div>
 </div>
+
+<% if flash[:notice] %>
+  <div class="alert alert-danger"><%= flash[:notice] %></div>
+<% end %>
+
 <table class="table table-hover boards__table">
   <thead class="thead-dark">
     <tr>
