@@ -38,12 +38,14 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    anbt-sql-formatter (0.0.5)
     annotate (2.7.2)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
     arel (7.1.4)
     autoprefixer-rails (8.0.0)
       execjs
+    awesome_print (1.8.0)
     bindex (0.5.0)
     bootstrap (4.0.0)
       autoprefixer-rails (>= 6.0.3)
@@ -130,6 +132,10 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-flog (1.4.0)
+      anbt-sql-formatter
+      awesome_print
+      rails (>= 3.2.0)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     rails-i18n (5.1.1)
@@ -203,6 +209,7 @@ DEPENDENCIES
   pry-byebug
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
+  rails-flog
   rails-i18n
   sass-rails (~> 5.0)
   spring
