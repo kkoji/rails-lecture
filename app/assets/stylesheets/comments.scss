@@ -13,3 +13,29 @@
   border-bottom: 2px solid #dfdfdf;
   padding-bottom: 5px;
 }
+
+.p-comment__listTitle {
+  border-bottom: 2px solid #dfdfdf;
+  padding-bottom: 5px;
+}
+
+.p-comment__list {
+  margin: 38px 0;
+  padding: 20px;
+}
+
+.p-comment__item {
+  padding: 18px;
+  border-bottom: 2px dotted #dfdfdf;
+}
+
+.p-comment__bottomLine {
+  font-size: 15px;
+  text-align: right;
+
+  > span {
+    font-size: 14px;
+    margin: 0 12px;
+  }
+}
+
