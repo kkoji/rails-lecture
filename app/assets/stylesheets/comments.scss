@@ -1,3 +1,15 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.p-comment__formBox {
+  margin: 30px auto;
+  border: 5px solid #e8e8e8;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.p-comment__formTitle {
+  border-bottom: 2px solid #dfdfdf;
+  padding-bottom: 5px;
+}
