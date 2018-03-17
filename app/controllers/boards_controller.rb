@@ -23,7 +23,7 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @comment = @board.comments.new
+    @comment = Comment.new(board_id: @board.id)
   end
 
   def edit

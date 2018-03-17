@@ -1,0 +1,7 @@
+<div class="p-comment__item">
+  <p><%= simple_format(comment.comment) %></p>
+  <div class="p-comment__bottomLine">
+    <span><%= comment.name %></span>
+    <span><%= comment.created_at.to_s(:datetime_jp) %></span>
+  </div>
+</div>
