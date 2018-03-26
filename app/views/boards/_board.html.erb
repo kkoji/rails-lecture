@@ -1,6 +1,9 @@
 <div class="card">
   <div class="card-header">
     <h4><%= board.title %></h4>
+    <% board.tags.each do |tag| %>
+      <span class="badge badge-primary"><%= tag.name %></span>
+    <% end %>
   </div>
   <div class="card-body">
     <p class="card-text"><%= simple_format(board.body) %></p>
