@@ -6,21 +6,25 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <%= header_link_item('Home', root_path) %>
-      <%= header_link_item('Boards', boards_path) %>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+      <li class="nav-item">
+        <%= header_link_item('ホーム', root_path) %>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <%= header_link_item('掲示板一覧', boards_path) %>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ユーザー
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if @current_user %>
+            <%= link_to 'マイページ', mypage_path, class: 'dropdown-item' %>
+            <%= link_to 'ログアウト', logout_path, method: :delete, class: 'dropdown-item' %>
+          <% else %>
+            <%= link_to '登録', new_user_path, class: 'dropdown-item' %>
+            <%= link_to 'ログイン', root_path, class: 'dropdown-item' %>
+          <% end %>
+        </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
