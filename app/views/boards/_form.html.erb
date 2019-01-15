@@ -1,6 +1,6 @@
 <%= render 'shared/error_messages' %>
 
-<%= form_for board do |f| %>
+<%= form_with model: board do |f| %>
   <div class="form-group">
     <%= f.label :name, '名前' %>
     <%= f.text_field :name, class: 'form-control' %>

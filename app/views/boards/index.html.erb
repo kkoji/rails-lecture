@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center">
   <h1>掲示板一覧</h1>
   <div class="ml-auto boards__linkBox">
-    <%= form_tag boards_path, method: :get, class: 'boards__searchForm' do %>
+    <%= form_with url: boards_path, method: :get, class: 'boards__searchForm' do %>
       <%= select_tag :tag_id,
                      options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
                      {
